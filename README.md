@@ -32,10 +32,10 @@ The final application allows users to enter taxi demand features and instantly r
 
 ## Streamlit Web Application
 
-> *(Add your deployed Streamlit link here after deployment)*
+
 
 ```
-https://your-flowcast.streamlit.app
+
 ```
 
 ---
