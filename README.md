@@ -42,7 +42,7 @@ https://your-flowcast.streamlit.app
 
 # 📷 Application Preview
 
-![FlowCast Dashboard](images/flowcast_dashboard.png)![FlowCast Dashboard](images/flowcast_dashboard.png)
+![FlowCast Dashboard](images/flowcast_dashboard.png)
 
 ---
 
