@@ -1,83 +1,96 @@
-<div align="center">
+<h1 align="center">🚖 FlowCast</h1>
 
-# 🚖 FlowCast
-### AI-Powered NYC Taxi Demand Prediction
+<p align="center">
+  <b>End-to-End Machine Learning Project for NYC Taxi Demand Prediction</b>
+</p>
 
-An end-to-end Machine Learning project that predicts hourly taxi demand using historical NYC Yellow Taxi data through advanced feature engineering and regression models.
-
----
-
-![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?style=for-the-badge&logo=scikitlearn)
-![XGBoost](https://img.shields.io/badge/XGBoost-Regressor-green?style=for-the-badge)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-purple?style=for-the-badge&logo=pandas)
-![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
-
-</div>
+<p align="center">
+Built using Python, Scikit-learn, XGBoost, Random Forest, Pandas and Streamlit.
+</p>
 
 ---
 
-# 📖 Overview
+# 📌 Project Overview
 
-FlowCast is an end-to-end Machine Learning project that predicts hourly taxi demand across New York City using historical Yellow Taxi trip records.
+FlowCast is an end-to-end Machine Learning project that predicts hourly NYC taxi demand using historical taxi trip data.
 
-The project demonstrates the complete Machine Learning lifecycle—from raw data preprocessing and exploratory analysis to feature engineering, model training, evaluation, and deployment.
+The project follows the complete ML workflow:
 
-The final model enables demand prediction for any pickup location and time based on historical demand patterns.
+- Data Collection
+- Data Cleaning
+- Exploratory Data Analysis (EDA)
+- Feature Engineering
+- Model Training
+- Model Evaluation
+- Model Deployment using Streamlit
+
+The final application allows users to enter taxi demand features and instantly receive a prediction through an interactive web interface.
+
+---
+
+# 🚀 Demo
+
+## Streamlit Web Application
+
+> *(Add your deployed Streamlit link here after deployment)*
+
+```
+https://your-flowcast.streamlit.app
+```
+
+---
+
+# 📷 Application Preview
+
+![FlowCast Dashboard](images/flowcast_dashboard.png)![FlowCast Dashboard](images/flowcast_dashboard.png)
 
 ---
 
 # ✨ Features
 
-- 📂 Data Cleaning & Preprocessing
-- 📊 Exploratory Data Analysis (EDA)
-- ⏰ Hourly Demand Aggregation
-- 🧠 Time-Series Feature Engineering
-- 🤖 Multiple Regression Models
-- 📈 Model Performance Comparison
-- ⭐ Feature Importance Analysis
-- 💾 Model Serialization using Joblib
-- 🔮 Demand Prediction
-- 🚀 Ready for Streamlit Deployment
+- End-to-End Machine Learning Pipeline
+- NYC Taxi Demand Prediction
+- Time-Series Feature Engineering
+- Interactive Streamlit Dashboard
+- Real-Time Predictions
+- Random Forest Model Deployment
+- Clean Modular Project Structure
 
 ---
 
 # 🛠 Tech Stack
 
-### Programming Language
+### Programming
 
 - Python
-
-### Machine Learning
-
-- Scikit-learn
-- XGBoost
 
 ### Data Analysis
 
 - Pandas
 - NumPy
 
+### Machine Learning
+
+- Scikit-learn
+- XGBoost
+
 ### Visualization
 
 - Matplotlib
 
-### Model Persistence
+### Deployment
 
-- Joblib
-
-### Development Environment
-
-- Jupyter Notebook
-- Git
-- GitHub
+- Streamlit
 
 ---
 
 # 📂 Project Structure
 
-```text
-FLOWCAST/
+```
+FlowCast/
+│
+├── dashboard/
+│   └── app.py
 │
 ├── data/
 │   ├── raw/
@@ -97,189 +110,120 @@ FLOWCAST/
 │   └── 06_model_deployment.ipynb
 │
 ├── reports/
-│   ├── feature_importance.csv
-│   ├── model_results.csv
-│   └── sample_prediction.csv
 │
 ├── requirements.txt
-├── README.md
-└── LICENSE
+│
+└── README.md
 ```
 
 ---
 
-# 🔄 Machine Learning Pipeline
+# 📊 Machine Learning Pipeline
 
-```text
-               Raw Taxi Trip Data
-                      │
-                      ▼
-          Data Cleaning & Preprocessing
-                      │
-                      ▼
-      Exploratory Data Analysis (EDA)
-                      │
-                      ▼
-       Hourly Demand Aggregation
-                      │
-                      ▼
-         Feature Engineering
-                      │
-                      ▼
-        Model Training & Evaluation
-                      │
-                      ▼
-       Best Model Selection
-                      │
-                      ▼
-      Machine Learning Deployment
-                      │
-                      ▼
-          Taxi Demand Prediction
+```
+Raw Taxi Data
+        │
+        ▼
+Data Cleaning
+        │
+        ▼
+Exploratory Data Analysis
+        │
+        ▼
+Demand Aggregation
+        │
+        ▼
+Feature Engineering
+        │
+        ▼
+Model Training
+        │
+        ▼
+Model Evaluation
+        │
+        ▼
+Best Model Selection
+        │
+        ▼
+Streamlit Deployment
 ```
 
 ---
 
-# 🧠 Feature Engineering
+# 🤖 Models Trained
 
-## Time Features
+- Linear Regression
+- Random Forest
+- XGBoost
 
+Random Forest achieved the best performance and was selected as the final deployed model.
+
+---
+
+# 📈 Input Features
+
+The deployed model predicts taxi demand using:
+
+- Pickup Location ID
 - Hour
 - Day of Week
 - Month
 - Weekend Indicator
-- Peak Hour Indicator
-
-## Historical Demand Features
-
 - Lag 1
 - Lag 24
 - Rolling Mean (3)
 - Rolling Mean (24)
 - Rolling Standard Deviation (24)
-
-These features enable the model to learn temporal demand trends and improve prediction accuracy.
-
----
-
-# 🤖 Models Evaluated
-
-- Linear Regression
-- Random Forest Regressor
-- XGBoost Regressor
+- Peak Hour Indicator
 
 ---
 
-# 📊 Model Performance
+# ▶️ Installation
 
-| Model | R² Score | MAE | RMSE |
-|-------|---------:|----:|------:|
-| Linear Regression | 0.9516 | 9.13 | 17.95 |
-| **Random Forest** ⭐ | **0.9730** | **6.03** | **13.40** |
-| XGBoost | 0.9632 | 6.61 | 15.65 |
+Clone the repository
 
-The **Random Forest Regressor** achieved the highest predictive performance and was selected as the final production model.
+```bash
+git clone https://github.com/agnishwar16/flowcast.git
+```
 
----
+Move into the project
 
-# 📈 Feature Importance
+```bash
+cd flowcast
+```
 
-The trained Random Forest model identifies which engineered features contribute most to prediction accuracy.
+Install dependencies
 
-The most influential features include:
+```bash
+pip install -r requirements.txt
+```
 
-- Rolling Mean (3)
-- Lag 1
-- Lag 24
-- Rolling Mean (24)
+Run the application
 
-A complete feature importance report is available inside the **reports/** directory.
-
----
-
-# 🔮 Sample Prediction
-
-### Input
-
-| Feature | Value |
-|----------|------:|
-| Pickup Location | 161 |
-| Hour | 10 |
-| Day of Week | 2 |
-| Month | 3 |
-| Weekend | 0 |
-| Peak Hour | 1 |
-| Lag 1 | 42 |
-| Lag 24 | 36 |
-
-### Output
-
-```text
-Predicted Taxi Demand
-
-39.40
+```bash
+streamlit run dashboard/app.py
 ```
 
 ---
 
-# 📦 Project Outputs
+# 🎯 Future Improvements
 
-The project generates:
-
-- ✅ Cleaned Dataset
-- ✅ Hourly Demand Dataset
-- ✅ Feature Engineered Dataset
-- ✅ Trained Random Forest Model
-- ✅ Model Evaluation Report
-- ✅ Feature Importance Report
-- ✅ Sample Prediction Report
-
----
-
-# 🚀 Future Roadmap
-
-- [x] Data Cleaning
-- [x] Exploratory Data Analysis
-- [x] Feature Engineering
-- [x] Model Training
-- [x] Model Evaluation
-- [x] Model Deployment
-- [ ] Interactive Streamlit Dashboard
-- [ ] Cloud Deployment
-- [ ] FastAPI Backend
-- [ ] Real-Time Predictions
-
----
-
-# 📚 Learning Outcomes
-
-This project demonstrates practical experience with:
-
-- End-to-End Machine Learning
-- Data Preprocessing
-- Exploratory Data Analysis
-- Time-Series Feature Engineering
-- Regression Algorithms
-- Feature Importance Analysis
-- Model Evaluation
-- Model Serialization
-- Machine Learning Deployment
-- Version Control using Git & GitHub
+- Deploy using Streamlit Community Cloud
+- Add live weather features
+- Include holiday effects
+- Hyperparameter tuning
+- Deep Learning (LSTM) model
+- API deployment using FastAPI
 
 ---
 
 # 👨‍💻 Author
 
-**Your Name**
+**Agnishwar Mukherjee**
 
-B.Tech Computer Science Engineering (Artificial Intelligence)
+B.Tech CSE (AI Specialization)
 
-Machine Learning • Artificial Intelligence • Data Science
 
----
 
-<div align="center">
-
-### ⭐ If you found this project useful, consider giving it a star!
-
-</div>
+GitHub:
+https://github.com/agnishwar16
